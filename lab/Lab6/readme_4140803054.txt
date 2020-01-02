@@ -1,0 +1,7 @@
+Name: Edgar Martinez 
+Email: edgarmar@usc.edu
+
+When you are going to run this code make sure to change the file path for the input directory (where we will be reading the images from) and the output directory (where we will be writing our processed images).
+
+Note: (Option: Grey Scaling)
+When I grey scaled the image we started of with a RGB (3 dimensional array) and end up with a greyscale image (2 dimensional array). 

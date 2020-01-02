@@ -1,0 +1,32 @@
+// Name: Edgar Martinez
+// Email: edgarmar@usc.edu
+
+```````````````````````````````````````````````````````````````````````````````````
+
+Class Date:
+
+When compiling the date.cpp and test_date.cpp initially we didn't get the desired output. Looking at the code in the TODO section of date.cpp I found that the issue was that we were not writing to the day, month, and year members of our Date class. Instead we were writing to the arguments day, month, and year of the function (which were named the same as the members of the class). To resolve the issue I used "this" keyword (which is a pointer to our Date class) to make it explicit that I wanted to access the class members and not the function arguments.
+
+```````````````````````````````````````````````````````````````````````````````````
+
+Class Connection:
+
+Connection(string filename):
+For the overloaded constructor that takes a filename as an argument, we simply had to call the set_connection() method with our filename as an argument. This would call the overloaded set_connection() method that takes a filename as an argument.
+
+set_connection(string filename):
+We were asked to write a method for our Connection class. The method that we had to write was one of the overloaded set_connection() methods that would take a filename as an argument. To do so, you have to first open the file to read from, then use getline() for extracting the first/last name, and birthdate. Lastly you have to allocate a new Date object with the extracted birthdate information, the address to this newly created object is assigned to a Date* inside our Connection class named birthdate. (Don't forget to close the file)
+
+operator==: 
+Overloading the == operator to check if two connections are the same involved checking three conditions. You have to compare if the first/last name and birthdate of the class on the lhs is equal to the first/last name and birthdate of the rhs. The rhs is an argument to our overloaded == function that is an address of a Connection object. If the first/last name and birthdate are the same for the lhs and right hand side then return true, else return false.
+
+operator!=: 
+To implement the != operator, we made use of the == operator for comparing two Connection objects. We compare the Connection object by using "this" pointer to the rhs argument and return the negated results. (maing that if two Connection objects are equal, then != will return 0) 
+
+```````````````````````````````````````````````````````````````````````````````````
+
+Class Network:
+
+I followed the instructions to write the methods for the network class. I tested the network class with my own input files (sample2.txt, sample3.txt, sample4.txt). The code is still using these files as input. The original code, which would result in opening new files and setting default values is commented out in "test_netwrok.cpp".
+
+`````````````````````````````````````````````````````````````````````````````````````

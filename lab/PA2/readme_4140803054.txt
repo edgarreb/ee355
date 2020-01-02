@@ -1,0 +1,5 @@
+// Name: Edgar Martinez
+// Email: edgarmar@usc.edu
+
+Note: (Extra Credit)
+remove() was implemented in network.cpp. 

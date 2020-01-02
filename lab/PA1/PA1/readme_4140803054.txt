@@ -1,0 +1,24 @@
+// Name: Edgar Martinez
+// Email: edgarmar@usc.edu
+
+``````````````````````````````````````````````````````````````````````````````````
+
+Server Compiling Error:
+When compiling my PA on the viterbi servers I would get a message saying that to_string() function and atoi() was not defined. I read a post in the discussion forum where another student was having the same issue, he included -std=c++11 as the compile extension and the errors went away. 
+
+to_string() was used in contact.cpp (line 135) to convert a long int to a string.
+atoi() was used in contact.cpp. 
+
+```````````````````````````````````````````````````````````````````````````````````
+
+Special Case:
+When you run the PA and try add a new connection when the LL is empty you get a message saying "ERROR: List Empty". This message comes from the way I implemented search(Connection*) function, it will cout this message if the list is empty. Adding a new connection works, but this message just pops up if the list is empty and you are trying to add a new connection. 
+
+```````````````````````````````````````````````````````````````````````````````````
+
+sendEmail():
+When trying to send an email you must provide an attachment file in order for the email to send. If you do not have an attachment file, or the file does not exist in the current directory the email will not send. 
+
+Solution: (didn't implement)
+Although this was not required you can fix this by simply checking inside of the sendEmail() method is the user has attatched anything, if he has use the -a attachment flag in the command that is sent to the terminal. Also check if the file exists in the current directory. If the user has no attachment to send, simply exclude the -a attachment flag in the command sent to the terminal.
+
